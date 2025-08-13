@@ -16,3 +16,48 @@ export const createRegistro = (req, res) => {
     data: novoRegistro
   });
 };
+// GET: Listar todos os registros
+export const getAllRegistros = (req, res) => {
+  res.json(registros);
+};
+
+// GET/ Ver registro específico
+export const getRegistroById = (req, res) => {
+  const { id } = req.params;
+  const registro = registros.find(r => r.id === parseInt(id));
+
+  if (!registro) {
+    return res.status(404).json({ message: "Registro não encontrado" });
+  }
+
+  res.json(registro);
+};
+
+// PUT/ Atualizar registro
+export const updateRegistro = (req, res) => {
+  const { id } = req.params;
+  const index = registros.findIndex(r => r.id === parseInt(id));
+
+  if (index === -1) {
+    return res.status(404).json({ message: "Registro não encontrado" });
+  }
+
+  registros[index] = { ...registros[index], ...req.body };
+  res.json({
+    message: "Registro atualizado com sucesso!",
+    data: registros[index]
+  });
+};
+
+// DELETE/ Excluir registro
+export const deleteRegistro = (req, res) => {
+  const { id } = req.params;
+  const registro = registros.find(r => r.id === parseInt(id));
+
+  if (!registro) {
+    return res.status(404).json({ message: "Registro não encontrado" });
+  }
+
+  registros = registros.filter(r => r.id !== parseInt(id));
+  res.json({ message: "Registro excluído com sucesso!" });
+};
