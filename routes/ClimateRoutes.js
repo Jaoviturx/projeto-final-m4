@@ -4,18 +4,18 @@ import { createLocal, getAllLocais, getLocalById, updateLocal, deleteLocal } fro
 const router = express.Router();
 
 // POST: Cadastrar novo local
-router.post("/", createLocal);
+router.post("/climate", createLocal);
 
 // GET: Listar todos os locais
-router.get("/", getAllLocais);
+router.get("/climate", getAllLocais);
 
 // GET/:id: Ver local específico
-router.get("/:id", getLocalById);
+router.get("/climate/:id", getLocalById);
 
 // PUT/:id: Atualizar local
-router.put("/:id", updateLocal);
+router.put("/climate/:id", updateLocal);
 
 // DELETE/:id: Excluir local
-router.delete("/:id", deleteLocal);
+router.delete("/climate/:id", deleteLocal);
 
 export default router;

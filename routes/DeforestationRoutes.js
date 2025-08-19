@@ -4,18 +4,18 @@ import { createRegistro, getAllRegistros, getRegistroById, updateRegistro, delet
 const router = express.Router();
 
 // POST: Cadastrar novo registro de desmatamento
-router.post("/", createRegistro);
+router.post("/deforestation", createRegistro);
 
 // GET: Listar todos os registros
-router.get("/", getAllRegistros);
+router.get("/deforestation", getAllRegistros);
 
 // GET/:id: Ver registro específico
-router.get("/:id", getRegistroById);
+router.get("/deforestation/:id", getRegistroById);
 
 // PUT/:id: Atualizar registro
-router.put("/:id", updateRegistro);
+router.put("/deforestation/:id", updateRegistro);
 
 // DELETE/:id: Excluir registro
-router.delete("/:id", deleteRegistro);
+router.delete("/deforestation/:id", deleteRegistro);
 
 export default router;
