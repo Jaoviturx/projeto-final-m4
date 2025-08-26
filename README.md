@@ -1,7 +1,6 @@
-# 📦 Nome do Projeto
+# 📦projeto final m4
 
-Breve descrição do projeto: o que ele faz, qual problema resolve e para quem é destinado.  
-Exemplo: "API para gerenciamento de produtos e avaliações de clientes, desenvolvida em Node.js seguindo o padrão MVC."
+Breve descrição do projeto:API voltada para o gerenciamento de informaçoes relacionadas as mudanças climaticas e ao desmatamento
 
 ---
 
@@ -51,18 +50,23 @@ Servidor rodando em http://localhost:3000
 
 | Método | Rota            | Descrição                     |
 |--------|-----------------|-------------------------------|
-| GET    | `/climate`     | Lista todos os produtos       |
-| POST   | `/climate`     | Cria um novo produto          |
-| PUT    | `/climate/:id` | Atualiza produto por ID       |
-| DELETE | `/climate/:id` | Remove produto por ID         |
+| GET    | `/climate`     | Lista todos os locais de mundanças climaticas      |
+| POST   | `/climate`     | Cria um novo local           |
+| PUT    | `/climate/:id` | Atualiza o local de mudanças climaticas       |
+| DELETE | `/climate/:id` | Remove o local adicionado         |
 
 | Método | Rota            | Descrição                     |
 |--------|-----------------|-------------------------------|
-| GET    | `/deforestation`     | Lista todos os produtos       |
-| POST   | `/deforestation`     | Cria um novo produto          |
-| PUT    | `/deforestation/:id` | Atualiza produto por ID       |
-| DELETE | `/deforestation/:id` | Remove produto por ID         |
+| GET    | `/deforestation`     | Lista registros de florestas desmatadas       |
+| POST   | `/deforestation`     | Cria um novo registro de areas desmatadas         |
+| PUT    | `/deforestation/:id` | Atualiza o registro de areas desmatadas      |
+| DELETE | `/deforestation/:id` | Remove um registro         |
 
 
 ## :smiley_cat: Authors
-- Tábata Macedo
+- João Vitor
+  Vitória Lara
+  João Miguel
+  Luisa Malta
+  Beatriz Fernandes
+  Marcilene Miranda
