@@ -1,7 +1,27 @@
 import Climate from "../models/ClimateModel.js";
 
 // Array para armazenar os locais
-let locais = [];
+let locais = [mudancasClimaticas = {
+  causas: [
+    "Emissão de gases de efeito estufa (CO₂, metano, óxidos de nitrogênio)",
+    "Desmatamento e degradação florestal",
+    "Queima de combustíveis fósseis",
+    "Agricultura intensiva e pecuária"
+  ],
+  consequencias: [
+    "Aumento da temperatura média global",
+    "Degelo das calotas polares e elevação do nível do mar",
+    "Eventos climáticos extremos (secas, furacões, enchentes)",
+    "Perda da biodiversidade e extinção de espécies",
+    "Impactos na saúde humana"
+  ],
+  dadosRecentes: {
+    aquecimentoGlobal: "1,2 °C (variando entre 1,24 a 1,28 °C)",
+    aquecimento2024: "1,6 °C",
+    nivelDoMarSeculo: "16–21 cm",
+    metaAcordoParis: "Limitar à 1,5 °C até 2050"
+  }
+}];
 let idCounter = 1;
 
 // POST: Cadastrar novo local
