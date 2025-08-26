@@ -1,17 +1,13 @@
 export function validateDeforestation(req, res, next) {
-  const { regiao, hectaresPerdidos, ano } = req.body;
+  const { nome, areaDesmatada, ano, causa } = req.body;
 
-  if (!regiao || !hectaresPerdidos || !ano) {
+  if (!nome || !areaDesmatada || !ano || !causa) {
     return res.status(400).json({
-      message: "Campos obrigatórios: regiao, hectaresPerdidos e ano"
+      message: "Preencha todos os campos obrigatórios"
     });
   }
 
-  if (typeof hectaresPerdidos !== "number" || typeof ano !== "number") {
-    return res.status(400).json({
-      message: "hectaresPerdidos e ano devem ser números"
-    });
-  }
+
 
   next();
 }

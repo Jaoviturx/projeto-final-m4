@@ -1,10 +1,10 @@
 import express from "express";
 import { createRegistro, getAllRegistros, getRegistroById, updateRegistro, deleteRegistro } from "../controllers/DeforestationController.js";
-
+import { validateDeforestation } from "../middlewares/validateDeforestation.js";
 const router = express.Router();
 
 // POST: Cadastrar novo registro de desmatamento
-router.post("/deforestation", createRegistro);
+router.post("/deforestation",validateDeforestation, createRegistro);
 
 // GET: Listar todos os registros
 router.get("/deforestation", getAllRegistros);

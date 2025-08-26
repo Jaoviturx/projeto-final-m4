@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json()); // Para o servidor entender JSON
 
 // Rotas
-app.use("/climate", climateRoutes);
-app.use("/deforestation", deforestationRoutes);
+app.use(climateRoutes);
+app.use(deforestationRoutes);
 
 // Porta do servidor
 const PORT = 3000;

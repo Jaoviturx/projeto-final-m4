@@ -1,15 +1,9 @@
 export function validateClimate(req, res, next) {
-  const { nome, temperatura, umidade } = req.body;
+  const {  nome, descricao, ano, impacto } = req.body;
 
-  if (!nome || !temperatura || !umidade) {
+  if (!nome ||  !descricao|| !ano|| !impacto) {
     return res.status(400).json({
-      message: "Campos obrigatórios: nome, temperatura e umidade"
-    });
-  }
-
-  if (typeof temperatura !== "number" || typeof umidade !== "number") {
-    return res.status(400).json({
-      message: "Temperatura e umidade devem ser números"
+      message: "Preencha todos os campos obrigatórios"
     });
   }
 
