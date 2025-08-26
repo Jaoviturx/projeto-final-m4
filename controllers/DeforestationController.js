@@ -1,23 +1,7 @@
 import Deforestation from "../models/DeforestationModel.js";
 
 // Array para armazenar registros de desmatamento
-let registros = [desmatamentoInfo = {
-  estatisticasGlobais: {
-    primaria2023: "3.7 milhões de ha (florestas tropicais primárias)",
-    totalGlobal2023: "6.4 milhões de ha (inclui áreas degradadas)"
-  },
-  brasil2023: {
-    totalDesmatado: "1.829.597 ha",
-    quedaPercentual: "−11,6 %",
-    cerrado: "1.110.326 ha (61% do desmatamento nacional)",
-    amazonas: "454.300 ha"
-  },
-  causas: {
-    agropecuaria: "97% do desmatamento no Brasil",
-    pecuariaAmazonia: "80% do desmatamento na Amazônia"
-  }
-}
-];
+let registros = [];
 let idCounter = 1;
 
 // POST: Cadastrar novo registro
