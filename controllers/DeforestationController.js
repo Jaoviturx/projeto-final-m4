@@ -41,9 +41,9 @@ let registros = [
 
 // POST: Cadastrar novo registro
 export const createRegistro = (req, res) => {
-  const { regiao, causa, ano, areaPerdida } = req.body;
+  const { nome, areaDesmatada, ano, causa } = req.body;
 
-  const novoRegistro = new Deforestation(registros.length + 1, regiao, causa, ano, areaPerdida);
+  const novoRegistro = new Deforestation(registros.length + 1, nome, areaDesmatada, ano, causa);
   registros.push(novoRegistro);
 
   res.status(201).json({
