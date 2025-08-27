@@ -1,14 +1,49 @@
 import Deforestation from "../models/DeforestationModel.js";
 
 // Array para armazenar registros de desmatamento
-let registros = [];
-let idCounter = 1;
+let registros = [
+  {
+    id: 1,
+    nome: "Florestas Tropicais Primárias (Mundo)",
+    areaDesmatada: "3.7 milhões ha",
+    ano: 2023,
+    causa: "Expansão agropecuária, extração de madeira"
+  },
+  {
+    id: 2,
+    nome: "Florestas Tropicais (Global total, incluindo degradação)",
+    areaDesmatada: "6.4 milhões ha",
+    ano: 2023,
+    causa: "Agropecuária, mineração, extração ilegal de madeira"
+  },
+  {
+    id: 3,
+    nome: "Brasil (Total)",
+    areaDesmatada: "1.829.597 ha",
+    ano: 2023,
+    causa: "Principalmente agropecuária (97%)"
+  },
+  {
+    id: 4,
+    nome: "Cerrado (Brasil)",
+    areaDesmatada: "1.110.326 ha",
+    ano: 2023,
+    causa: "Expansão agropecuária (soja e pecuária)"
+  },
+  {
+    id: 5,
+    nome: "Amazônia (Brasil)",
+    areaDesmatada: "454.300 ha",
+    ano: 2023,
+    causa: "Pecuária (80% do desmatamento)"
+  }
+];
 
 // POST: Cadastrar novo registro
 export const createRegistro = (req, res) => {
   const { regiao, causa, ano, areaPerdida } = req.body;
 
-  const novoRegistro = new Deforestation(idCounter++, regiao, causa, ano, areaPerdida);
+  const novoRegistro = new Deforestation(registros.length + 1, regiao, causa, ano, areaPerdida);
   registros.push(novoRegistro);
 
   res.status(201).json({
